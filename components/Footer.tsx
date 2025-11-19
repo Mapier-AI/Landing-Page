@@ -9,7 +9,7 @@ export default function Footer() {
             <span className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
               Mapier
             </span>
-            <p className="text-sm mt-2">AI驱动的智能导航应用</p>
+            <p className="text-sm mt-2">AI-Powered Navigation App</p>
           </div>
           <div className="text-sm">
             <p>&copy; {new Date().getFullYear()} Mapier. All rights reserved.</p>
@@ -19,4 +19,3 @@ export default function Footer() {
     </footer>
   );
 }
-

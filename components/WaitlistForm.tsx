@@ -27,14 +27,14 @@ export default function WaitlistForm() {
       const data = await response.json();
 
       if (!response.ok) {
-        throw new Error(data.error || '提交失败，请稍后重试');
+        throw new Error(data.error || 'Submission failed, please try again later');
       }
 
       setIsSuccess(true);
       setEmail('');
       setName('');
     } catch (err) {
-      setError(err instanceof Error ? err.message : '提交失败，请稍后重试');
+      setError(err instanceof Error ? err.message : 'Submission failed, please try again later');
     } finally {
       setIsSubmitting(false);
     }
@@ -48,16 +48,16 @@ export default function WaitlistForm() {
             <CheckCircle2 className="w-8 h-8 text-green-600" />
           </div>
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-            感谢您的关注！
+            Thank You!
           </h2>
           <p className="text-xl text-gray-600 mb-8">
-            我们会在产品上线时第一时间通知您
+            We'll notify you as soon as the product launches
           </p>
           <button
             onClick={() => setIsSuccess(false)}
             className="text-blue-600 hover:text-blue-700 font-medium"
           >
-            再次提交
+            Submit Again
           </button>
         </div>
       </section>
@@ -69,10 +69,10 @@ export default function WaitlistForm() {
       <div className="max-w-2xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
-            加入等待列表
+            Join the Waitlist
           </h2>
           <p className="text-xl text-gray-600">
-            成为首批体验Mapier AI导航的用户，抢先感受智能导航的魅力
+            Be among the first to experience Mapier AI navigation and discover the power of intelligent navigation
           </p>
         </div>
         <form onSubmit={handleSubmit} className="space-y-4">
@@ -81,7 +81,7 @@ export default function WaitlistForm() {
               type="text"
               value={name}
               onChange={(e) => setName(e.target.value)}
-              placeholder="您的姓名"
+              placeholder="Your Name"
               className="w-full px-6 py-4 rounded-xl border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all text-gray-900 placeholder-gray-400"
               required
             />
@@ -91,7 +91,7 @@ export default function WaitlistForm() {
               type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              placeholder="您的邮箱地址"
+              placeholder="Your Email Address"
               className="w-full px-6 py-4 rounded-xl border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all text-gray-900 placeholder-gray-400"
               required
             />
@@ -109,18 +109,17 @@ export default function WaitlistForm() {
             {isSubmitting ? (
               <>
                 <Loader2 className="w-5 h-5 mr-2 animate-spin" />
-                提交中...
+                Submitting...
               </>
             ) : (
-              '提交申请'
+              'Submit'
             )}
           </button>
         </form>
         <p className="mt-6 text-center text-sm text-gray-500">
-          我们承诺不会向第三方分享您的信息
+          We promise not to share your information with third parties
         </p>
       </div>
     </section>
   );
 }
-

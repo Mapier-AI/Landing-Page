@@ -13,12 +13,12 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Mapier - AI驱动的智能导航应用",
-  description: "Mapier利用先进的大型语言模型技术，理解复杂的用户意图，提供个性化、智能化的导航体验。支持AI理解、个性化推荐、POI搜索、用户上传和语音控制等功能。",
-  keywords: ["AI导航", "智能导航", "地图导航", "LLM导航", "语音导航", "个性化导航"],
+  title: "Mapier - AI-Powered Navigation App",
+  description: "Mapier leverages advanced Large Language Model technology to understand complex user intents and deliver personalized, intelligent navigation experiences. Features include AI understanding, personalized recommendations, POI search, user uploads, and voice control.",
+  keywords: ["AI navigation", "intelligent navigation", "map navigation", "LLM navigation", "voice navigation", "personalized navigation"],
   openGraph: {
-    title: "Mapier - AI驱动的智能导航应用",
-    description: "让AI理解你的每一个导航需求",
+    title: "Mapier - AI-Powered Navigation App",
+    description: "Let AI Understand Your Every Navigation Need",
     type: "website",
   },
 };
@@ -29,7 +29,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="zh-CN">
+    <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >

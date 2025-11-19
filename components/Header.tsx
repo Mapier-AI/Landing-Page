@@ -14,13 +14,13 @@ export default function Header() {
           </Link>
           <nav className="hidden md:flex items-center space-x-8">
             <Link href="#features" className="text-gray-600 hover:text-gray-900 transition-colors">
-              功能
+              Features
             </Link>
             <Link href="#team" className="text-gray-600 hover:text-gray-900 transition-colors">
-              团队
+              Team
             </Link>
             <Link href="#waitlist" className="text-gray-600 hover:text-gray-900 transition-colors">
-              加入等待列表
+              Join Waitlist
             </Link>
           </nav>
         </div>
@@ -28,4 +28,3 @@ export default function Header() {
     </header>
   );
 }
-

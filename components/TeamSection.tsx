@@ -5,33 +5,38 @@ import { Linkedin } from 'lucide-react';
 const teamMembers = [
   {
     name: 'Jinyi Bruce Li',
-    role: '联合创始人 & CEO',
+    role: 'Co-founder',
+    specialization: 'UI/UX Branding Design & Product Design',
     linkedin: 'https://www.linkedin.com/in/jinyi-bruce-li/',
-    description: '拥有丰富的科技行业领导经验，致力于推动AI导航技术的创新与应用。',
+    description: 'Passionate about creating intuitive user experiences and building products that make a difference.',
   },
   {
     name: 'Homin Luo',
-    role: '联合创始人 & CTO',
+    role: 'Co-founder',
+    specialization: 'Engineering',
     linkedin: 'https://www.linkedin.com/in/hominluo/',
-    description: '专注于人工智能和导航技术的研发，在LLM应用领域有深厚的技术积累。',
+    description: 'Focused on AI and navigation technology development with deep expertise in LLM applications.',
   },
   {
     name: 'Mido Sang',
-    role: '首席开发工程师',
+    role: 'Co-founder',
+    specialization: 'Engineering',
     linkedin: 'https://www.linkedin.com/in/mido-sang-a99657265/',
-    description: '负责核心产品开发，在移动应用和地图服务开发方面拥有丰富经验。',
+    description: 'Leading core product development with extensive experience in mobile apps and mapping services.',
   },
   {
     name: 'Mark Xiong',
-    role: '产品经理',
+    role: 'Co-founder',
+    specialization: 'Product',
     linkedin: 'https://www.linkedin.com/in/mark-xiong-356aa3210/',
-    description: '擅长产品设计和用户体验优化，致力于打造直观易用的导航产品。',
+    description: 'Expert in product design and user experience optimization, dedicated to creating intuitive navigation products.',
   },
   {
     name: 'Neo Shangguan',
-    role: 'UX/UI 设计师',
+    role: 'Co-founder',
+    specialization: 'Engineering',
     linkedin: 'https://www.linkedin.com/in/neo-shangguan/',
-    description: '专注于用户界面和交互设计，创造美观且功能强大的用户体验。',
+    description: 'Specialized in user interface and interaction design, creating beautiful and powerful user experiences.',
   },
 ];
 
@@ -41,10 +46,10 @@ export default function TeamSection() {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
-            我们的团队
+            Our Team
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            由经验丰富的技术专家和产品团队组成，致力于打造下一代AI导航产品
+            A team of experienced technologists and product experts dedicated to building the next generation of AI navigation
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -58,14 +63,15 @@ export default function TeamSection() {
                   <h3 className="text-xl font-semibold text-gray-900 mb-1">
                     {member.name}
                   </h3>
-                  <p className="text-gray-600 text-sm mb-3">{member.role}</p>
+                  <p className="text-gray-600 text-sm mb-1">{member.role}</p>
+                  <p className="text-gray-500 text-xs mb-3">{member.specialization}</p>
                 </div>
                 <a
                   href={member.linkedin}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-2 rounded-lg bg-gray-100 hover:bg-blue-100 text-gray-600 hover:text-blue-600 transition-colors"
-                  aria-label={`${member.name}的LinkedIn`}
+                  aria-label={`${member.name}'s LinkedIn`}
                 >
                   <Linkedin className="w-5 h-5" />
                 </a>
@@ -80,4 +86,3 @@ export default function TeamSection() {
     </section>
   );
 }
-
